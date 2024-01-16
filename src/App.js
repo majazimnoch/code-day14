@@ -1,24 +1,52 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
 
 function App() {
+  const [count, setCount] = useState(1);
+  const [theme, setTheme] = useState('ticket');
+  const [click, setClick] = useState(false);
+
+  const decrementCount = () => {
+    if (count > 1) {
+      setCount(prevCount => {
+        const newCount = prevCount - 1;
+        updateTheme(newCount);
+        return newCount;
+      });
+    }
+  };
+
+  const incrementCount = () => {
+    setCount(prevCount => {
+      const newCount = prevCount + 1;
+      updateTheme(newCount);
+      return newCount;
+    });
+  };
+
+  const updateTheme = (newCount) => {
+    setTheme(newCount === 1 ? 'ticket' : 'tickets');
+  };
+
+  const handleClick = () => {
+    setClick(true);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="app">
+        <div className='wrapper'>
+          <button onClick={decrementCount}>-</button>
+          <span>{count}</span>
+          <span>{theme}</span>
+          <button onClick={incrementCount}>+</button>
+        </div>
+        <button onClick={handleClick}>Get</button>
+        {/* conditional rendering . If clicked is true it will render the <p> message */}
+        {click && <p>You got {count} {theme}</p>}
+      </div>
+    </>
+
   );
 }
 
