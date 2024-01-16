@@ -1,5 +1,6 @@
 import './App.css';
 import React, { useState } from 'react';
+import Visual from './components/Visual';
 
 function App() {
   const [count, setCount] = useState(1);
@@ -35,6 +36,7 @@ function App() {
   return (
     <>
       <div className="app">
+       <Visual />
         <div className='wrapper'>
           <button onClick={decrementCount}>-</button>
           <span>{count}</span>

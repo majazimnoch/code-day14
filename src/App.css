@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento+Sans:wght@400;700&display=swap');
+
 * {
   font-size: 50px;
+  background-color: #fefefe;
+  font-family: 'Quattrocento Sans', sans-serif;
 }
 
 .app {
@@ -18,6 +22,16 @@
 }
 
 button {
-  width: 100px;
-  height: 60px;
+  background-color: #ef9528;
+  border: none;
+  border-radius: 2px;
+  padding: 10px 40px;
+  transition: 0.3s;
+  opacity: 0.6;
+  color: #ffffff;
 }
+
+button:hover {
+  opacity: 1;
+}
+
