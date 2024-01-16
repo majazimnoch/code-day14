@@ -1,0 +1,23 @@
+.image-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+img {
+    height: 100vh;
+    width: 50vw;
+    object-fit: cover;
+}
+
+@media (max-width: 1023px) {
+    .image-wrapper {
+       border: 1px red solid;
+        width: 100vw;
+    }
+
+    img {
+        height: 50vh;
+        width: 100vw;
+    }
+}

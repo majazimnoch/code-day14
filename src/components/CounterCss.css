@@ -1,0 +1,36 @@
+.counter-component-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 2rem auto;
+}
+
+.counter-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+  .counting-part {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+  }
+  
+  button {
+    background-color: #ef9528;
+    border: none;
+    border-radius: 2px;
+    padding: 10px 40px;
+    transition: 0.3s;
+    opacity: 0.6;
+    color: #ffffff;
+  }
+  
+  button:hover {
+    opacity: 1;
+  }
