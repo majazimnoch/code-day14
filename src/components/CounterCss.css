@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     justify-content: flex-start;
     margin: 2rem auto;
 }
@@ -13,6 +14,7 @@
     justify-content: flex-start;
     gap: 20px;
   }
+  
   .counting-part {
     display: flex;
     flex-direction: row;
@@ -33,4 +35,21 @@
   
   button:hover {
     opacity: 1;
+  }
+
+  @media (max-width: 1023px) {
+    .counter-component-wrapper {
+        padding: 0 20px;
+        margin: .5rem auto;
+    }
+
+    button {
+        background-color: #ef9528;
+        border: none;
+        border-radius: 2px;
+        padding: 5px 20px;
+        transition: 0.3s;
+        opacity: 0.6;
+        color: #ffffff;
+      }
   }
