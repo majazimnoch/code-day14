@@ -27,6 +27,8 @@ I followed the React traditional folder structure. I created a folder called "co
 `handleClick`: Sets the click state to true when the "Get" button is clicked.
 
 ### useState
+The `useState` hook in React is used to add state variables to functional components. It returns an array with two elements: the current state value and a function to update that value. 
+
 `The Counter` component uses the `useState` hook to manage three states: count for tracking the number of tickets, theme for dynamically updating the display based on the count, and click to control conditional rendering. Buttons for incrementing and decrementing the count trigger corresponding functions, and clicking the "Get" button sets the click state to display a message with the current count and theme.
 
 ## Demo
