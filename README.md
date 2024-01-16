@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# Ticket counter with React Hook 'useState'
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Intro
 
-In the project directory, you can run:
+This is the fourteenth project of my 30-day coding challenge. The project includes following tech stuff: React, Hook "useState".
 
-### `npm start`
+## Idea
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+As Stockholm is spoiling its citizens with -15°C grades, I dared to dream about leaving everything and heding to Cran Canaria. Well, as I still lack some daring to get so spontaneous, I decided to create a booking system where a user can get tickets to this Spanish island. By clicking "-" we decrease the amount of tickets and by "+" we increase it. We cannot go below 1. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Breaking down the code
 
-### `npm test`
+I followed the React traditional folder structure. I created a folder called "components". I created separate CSS files for each components. The most interesting code we can see in the `Counter` component as that's where we see `useState`.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### State Variables
+`count`: Keeps track of the number of tickets selected, initialized to 1.
+`theme`: Represents the theme based on the count, initially set to "ticket" or "tickets."
+`click`: A boolean state to determine if the "Get" button has been clicked.
 
-### `npm run build`
+### Functions
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`decrementCount`: Decrements the count state by 1, but ensures it doesn't go below 1. It also updates the theme based on the new count.
+`incrementCount`: Increments the count state by 1 and updates the theme accordingly.
+`updateTheme`: Updates the theme based on the value of the newCount parameter.
+`handleClick`: Sets the click state to true when the "Get" button is clicked.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### useState
+`The Counter` component uses the `useState` hook to manage three states: count for tracking the number of tickets, theme for dynamically updating the display based on the count, and click to control conditional rendering. Buttons for incrementing and decrementing the count trigger corresponding functions, and clicking the "Get" button sets the click state to display a message with the current count and theme.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Demo
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Click <a href="https://sparkling-strudel-cea7aa.netlify.app/"> here </a>.
