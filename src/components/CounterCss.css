@@ -7,6 +7,10 @@
     margin: 2rem auto;
 }
 
+.counter-component-wrapper h1 {
+    font-size: 50px;
+}
+
 .counter-wrapper {
     display: flex;
     flex-direction: column;

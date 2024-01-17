@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Quattrocento+Sans:wght@400;700&display=swap');
 
 * {
-  font-size: 50px;
   background-color: #fefefe;
   font-family: 'Quattrocento Sans', sans-serif;
+  font-size: 40px;
 }
 
 .main-wrapper {
@@ -11,10 +11,22 @@
   flex-direction: row;
 }
 
+p {
+  font-size: 40px;
+}
+
+h1 {
+  font-size: 30px;
+}
+
 @media screen and (max-width: 1023px) {
   .main-wrapper {
     display: flex;
     flex-direction: column;
+  }
+
+  p {
+    font-size: 35px;
   }
 }
 
